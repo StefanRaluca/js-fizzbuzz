@@ -59,16 +59,17 @@ ul.append('li');
         let listItemClass = ""
         if (i % 3 === 0 && i % 5 === 0) {
             printPage += "<li class='fizzbuzz'>FizzBuzz</li>";
-            //console.log("FizzBuzz");
+            console.log("FizzBuzz");
         } else if (i % 3 === 0) {
             printPage += "<li class='fizz'>Fizz</li>";
-            // console.log("Fizz");
+        console.log("Fizz");
         } else if (i % 5 === 0) {
             printPage += "<li class='buzz'>Buzz</li>";
-            //console.log("Buzz");
+            console.log("Buzz");
 
         } else {
             printPage += "<li>" + i + "</li>";
+            console.log(i);
         }
     }
 
