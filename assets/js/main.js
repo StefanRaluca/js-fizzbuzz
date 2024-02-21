@@ -15,6 +15,8 @@ console.log("list");
 //- Dopo facciamo una operazione per trovare sia i numeri multipli di 3 sia di 5 e stampiamo un rezultato diverso (FizzBuzz) (questa condizione metti come prima)
 
 
+
+/* 
 document.addEventListener("DOMContentLoaded", function() {
     let printPage = "<ul>";
 
@@ -38,3 +40,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("container_list").innerHTML = printPage;
 });
+*/
+
+
+//Usiamo anche il metodo con append:
+// - (document.createElement) crea un elemento li in lista del Markup
+// - creiamo una const che la definiamo con elementId
+
+
+
+
+
+/*const ul =document.querySelector("ul.list_page");
+const li =document.createElement('li');
+li.append('Elemento');
+ul.append('li');
+*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    const prinPage = document.getElementById("list_page");
+
+    for (let i = 1; i <= 100; i++) {
+        let liPage = document.createElement("li");
+
+        if (i % 3 === 0 && i % 5 === 0) {
+            liPage.innerHTML = "FizzBuzz";
+        } else if (i % 3 === 0) {
+            liPage.innerHTML = "Fizz";
+        } else if (i % 5 === 0) {
+            liPage.innerHTML = "Buzz";
+        } else {
+            liPage.innerHTML = i;
+        }
+
+        prinPage.append(liPage);
+    }
+});
+
