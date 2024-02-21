@@ -56,14 +56,15 @@ ul.append('li');
 
     let printPage = "<ul>";
     for (let i = 1; i <= 100; i++) {
+        let listItemClass = ""
         if (i % 3 === 0 && i % 5 === 0) {
-            printPage += "<li>FizzBuzz</li>";
+            printPage += "<li class='fizzbuzz'>FizzBuzz</li>";
             //console.log("FizzBuzz");
         } else if (i % 3 === 0) {
-            printPage += "<li>Fizz</li>";
+            printPage += "<li class='fizz'>Fizz</li>";
             // console.log("Fizz");
         } else if (i % 5 === 0) {
-            printPage += "<li>Buzz</li>";
+            printPage += "<li class='buzz'>Buzz</li>";
             //console.log("Buzz");
 
         } else {
